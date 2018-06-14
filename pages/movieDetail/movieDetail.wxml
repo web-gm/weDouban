@@ -1,0 +1,62 @@
+<view class='detail_info_container'>
+  <view class='detail_title'>{{title}}</view>
+  <view class='detail_info_wrap'>
+    <view class='detail_info_left'>
+      <view class='star_code'>
+        <text wx:for='{{rating/2 -1}}' wx:key="{{index}}" class='rating-star rating-star-small-full'></text>
+        <text wx:for='{{5-rating/2}}'  wx:key="{{index}}"  class='rating-star rating-star-small-gray'></text>
+        <text class='star_score'>{{rating}}</text>
+        <text class='detail_rat_nums'>{{rating_count}}评价</text>
+      </view>
+      <view class='detail_info'>
+        {{info}}
+      </view>
+    </view>
+    <view class='detail_info_right'>
+      <image src='{{movie_avtar}}' mode='widthFix'></image>
+    </view>
+  </view>
+</view>
+<view class='detail_info_container'>
+  <view class='little_title'>
+    所属频道
+  </view>
+  <view class='tags_list'>
+  <text class='tag' wx:for="{{tags}}" wx:for-item="tag" wx:key='{{index}}' bindtap="toMovie"  data-tag="{{tag}}">{{tag}}
+  </text>
+</view>
+</view>
+<view class='detail_info_container'>
+  <view class='little_title'>
+    {{title}}的剧情简介
+  </view>
+  <view class='summary'>
+  {{summary}}
+</view>
+</view>
+<view class='detail_info_container'>
+  <view class='little_title'>
+    影人
+  </view>
+  <scroll-view class='movie_list' scroll-x='true'>
+    <view class='movie_item scroll-view-item' wx:for="{{movie_people}}" wx:for-item="people" wx:key='{{people.id}}'>
+      <view class='movie_item_wrap'>
+        <image class='movie_image' mode='aspectFit' src="{{people.avatars.small}}"></image>
+        <view class='movie_title'>{{people.name}}</view>
+        <view class='movie_title'>{{people.type}}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view class='detail_info_container'>
+  <view class='little_title'>
+    {{title}}的图片
+  </view>
+   <scroll-view class='movie_list review' scroll-x='true'>
+    <view class='movie_item scroll-view-item' wx:for="{{movie_img}}" wx:for-item="img" wx:key='{{img.id}}'>
+      <view class='movie_item_wrap'>
+        <image class='movie_image' mode='aspectFill' src="{{img.image}}"></image>
+      </view>
+    </view>
+  </scroll-view> 
+</view>

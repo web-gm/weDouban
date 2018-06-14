@@ -1,0 +1,4 @@
+/* pages/movie/movie.wxss */
+.movie_list_wrap{
+  padding: 0 30rpx;
+}

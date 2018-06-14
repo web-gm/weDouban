@@ -1,0 +1,60 @@
+/* pages/movieDetail/movieDetail.wxss */
+.detail_info_container{
+  padding: 30rpx 30rpx;
+}
+.detail_title{
+  color: #000;
+  font-size: 50rpx;
+  font-weight: bold;
+}
+.detail_info_wrap{
+  display: flex;
+}
+.detail_info_left{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.detail_rat_nums{
+  font-size: 13px;
+  color: #aaa;
+  padding-left: 20rpx;
+}
+.star_score{
+  color: #333;
+  font-size: 13px;
+}
+.detail_info_right{
+  flex-grow: 2;
+}
+.detail_info_right image{
+  width: 250rpx;
+  margin-left: 25rpx;
+}
+.detail_info{
+  font-size: 14px;
+}
+.little_title{
+  color: #aaa;
+  margin:40rpx 20rpx;
+}
+.tag{
+  display: inline-block;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 30rpx;
+  border-radius: 30rpx;
+  border: 1px solid #42bd56;
+  margin: 10rpx;
+  color: #42bd56;
+}
+.summary{
+  color: #333;
+  text-align: justify;
+  margin: 0 20rpx;
+  text-indent: 2em;
+}
+.review .movie_item{
+  width: 500rpx;
+}

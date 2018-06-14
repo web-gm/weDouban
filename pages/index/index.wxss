@@ -1,0 +1,60 @@
+/**index.wxss**/
+
+.in_theaters {
+  display: flex;
+  padding: 0 50rpx;
+  flex-direction: column;
+}
+
+.header_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  height: 100rpx;
+}
+
+.more.header_title_item {
+  text-align: right;
+  color: #42bd56;
+}
+
+.tags {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  border-top: 1px solid #ddd;
+}
+
+.tag {
+  flex: 0 0 50%;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  box-sizing: border-box;
+  height: 75rpx;
+  line-height: 75rpx;
+  color: #42bd56;
+  position: relative;
+  font-size: 30rpx;
+}
+
+.tag:after {
+  content: '';
+  position: absolute;
+  color: #ccc;
+  font-weight: bold;
+  display: inline-block;
+  border-right: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+  width: 20rpx;
+  height: 20rpx;
+  transform: rotate(-45deg);
+  right: 20rpx;
+  top:25rpx;
+  
+}
+
+.tag:nth-child(2n) {
+  border-right: 0;
+  padding-left: 20rpx;
+}

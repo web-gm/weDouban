@@ -1,0 +1,18 @@
+
+<text></text>
+<scroll-view scroll-y bindscrolltolower="lower"  lower-threshold='50' class='movie_list_wrap' style='height:{{height+"px"}}'>
+  <view class='movie_item scroll-view-item' wx:for="{{movie_list}}" wx:for-item="movie" wx:key='{{movie.id}}' bindtap="toDetail" data-id='{{movie.id}}'>
+      <view class='movie_item_wrap'>
+        <image class='movie_image' mode='aspectFit' src="{{movie.images.medium}}"></image>
+        <view class='movie_title'>{{movie.title}}</view>
+        <view class='star_code'>
+        
+        <!-- {{}} -->
+        <text wx:for='{{movie.rating.average/2 -1}}' wx:key="{{index}}" class='rating-star rating-star-small-full'></text>
+        <text wx:for='{{5-movie.rating.average/2}}'  wx:key="{{index}}"  class='rating-star rating-star-small-gray'></text>
+        <text class='star_score'>{{movie.rating.average}}</text>
+        </view>
+      </view>
+    </view>
+    <zan-toast id="zan-toast-test"></zan-toast>
+</scroll-view>

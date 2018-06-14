@@ -1,0 +1,97 @@
+
+<view class='in_theaters'>
+  <view class='header_title'>
+    <text class='header_title_item'>影院热映</text>
+    <navigator class='more header_title_item' url='../movie/movie?type=in_theaters'>更多</navigator>
+  </view>
+  <scroll-view class='movie_list' scroll-x='true'>
+    <view class='movie_item scroll-view-item' wx:for="{{in_theaters}}" wx:for-item="item_theaters" wx:key='{{item_theaters.id}}' bindtap="toDetail" data-id='{{item_theaters.id}}'>
+      <view class='movie_item_wrap'>
+        <image class='movie_image' mode='aspectFit' src="{{item_theaters.images.medium}}"></image>
+        <view class='movie_title'>{{item_theaters.title}}</view>
+        <view class='star_code'  wx:if="{{item_theaters.rating.averageStar}}">
+        
+        <text wx:for='{{item_theaters.rating.averageStar}}' wx:key="{{index}}" class='rating-star rating-star-small-full'></text>
+        <text wx:for='{{5-item_theaters.rating.averageStar}}'  wx:key="{{index}}"  class='rating-star rating-star-small-gray'></text>
+        <text class='star_score'>{{item_theaters.rating.average}}</text>
+        </view>
+        <view class='star_code' wx:if="{{item_theaters.rating.averageStar == 0}}">
+        
+        <text class='star_score'>暂无评分</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<!-- <view class='in_theaters'>
+  <view class='header_title'>
+    <text class='header_title_item'>即将上映</text>
+    <navigator class='more header_title_item' url='../movie/movie?type=coming_soon'>更多</navigator>
+  </view>
+  <scroll-view class='movie_list' scroll-x='true'>
+    <view class='movie_item scroll-view-item' wx:for="{{coming_soon}}" wx:for-item="coming_soon" wx:key='{{coming_soon.id}}'>
+      <view class='movie_item_wrap'>
+        <image class='movie_image' mode='aspectFit' src="{{coming_soon.images.medium}}"></image>
+        <view class='movie_title'>{{coming_soon.title}}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view> -->
+<view class='in_theaters'>
+  <view class='header_title'>
+    <text class='header_title_item'>新片速递</text>
+    <navigator class='more header_title_item' url='../movie/movie?type=new_movies'>更多</navigator>
+  </view>
+  <scroll-view class='movie_list' scroll-x='true'>
+    <view class='movie_item scroll-view-item' wx:for="{{new_movies}}" wx:for-item="item_new_movies" wx:key='{{item_new_movies.id}}' bindtap="toDetail" data-id='{{item_new_movies.id}}'>
+      <view class='movie_item_wrap'>
+        <image class='movie_image' mode='aspectFit' src="{{item_new_movies.images.medium}}"></image>
+        <view class='movie_title'>{{item_new_movies.title}}</view>
+        <view class='star_code' wx:if="{{item_new_movies.rating.averageStar}}">
+        
+        <text wx:for='{{item_new_movies.rating.averageStar}}' wx:key="{{index}}" class='rating-star rating-star-small-full'></text>
+        <text wx:for='{{5-item_new_movies.rating.averageStar}}'  wx:key="{{index}}"  class='rating-star rating-star-small-gray'></text>
+        <text class='star_score'>{{item_new_movies.rating.average}}</text>
+        </view>
+        <view class='star_code' wx:if="{{item_new_movies.rating.averageStar == 0}}">
+        
+        <text class='star_score'>暂无评分</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<!-- <view class='in_theaters'>
+  <view class='header_title'>
+    <text class='header_title_item'>口碑榜</text>
+    <navigator class='more header_title_item' url='../movie/movie?type=weekly'>更多</navigator>
+  </view>
+  <scroll-view class='movie_list' scroll-x='true'>
+    <view class='movie_item scroll-view-item' wx:for="{{weekly}}" wx:for-item="item_weekly" wx:key='{{item_weekly.id}}' bindtap="toDetail" data-id='{{item_weekly.id}}'>
+      <view class='movie_item_wrap'>
+        <image class='movie_image' mode='aspectFit' src="{{item_weekly.images.medium}}"></image>
+        <view class='movie_title'>{{item_weekly.title}}</view>
+        <view class='star_code' wx:if="{{item_weekly.rating.averageStar}}">
+        
+        <text wx:for='{{item_weekly.rating.averageStar}}' wx:key="{{index}}" class='rating-star rating-star-small-full'></text>
+        <text wx:for='{{item_weekly.rating.averageStar}}'  wx:key="{{index}}"  class='rating-star rating-star-small-gray'></text>
+        <text class='star_score'>{{item_weekly.rating.average}}</text>
+        </view>
+        <view class='star_code' wx:if="{{item_weekly.rating.averageStar == 0}}">
+        
+        <text class='star_score'>暂无评分</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view> -->
+ <view class='in_theaters'> 
+<view class='header_title'>
+    <text class='header_title_item'>分类浏览</text>
+  </view>
+<view class='tags'>
+
+  <text wx:for='{{tags}}' wx:for-item='tag' wx:key='{{index}}' class='tag' bindtap="toMovie"  data-tag="{{tag}}">{{tag}}</text>
+</view>
+</view>
